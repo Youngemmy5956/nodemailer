@@ -5,7 +5,7 @@ const crypto = import("crypto");
 const express = require("express");
 const router = express.Router();
 
-router.post("/", async (req, res) => {
+router.post("/register", async (req, res) => {
   try {
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
